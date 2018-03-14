@@ -14,5 +14,16 @@ ws.append([1, 2, 3])
 import datetime
 ws['A2'] = datetime.datetime.now()
 
+ws1 = wb.create_sheet('Mysheet')
+
+# print all sheetnames
+print(wb.sheetnames)
+
+# loop over sheets
+
+for sheet in wb:
+    print(sheet.title)
+
+
 # Save the file
 wb.save("sample.xlsx")
